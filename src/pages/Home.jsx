@@ -48,7 +48,7 @@ const HomePage = () => {
             <div className="flex flex-col items-center">
               {/* Conditional rendering for image/placeholder */}
               {imageLoaded ? (
-                <div className="w-full max-w-4xl aspect-video rounded-lg shadow-lg mb-12 overflow-hidden my-10">
+                <div className="w-full max-w-3xl aspect-video rounded-lg shadow-lg mb-12 overflow-hidden my-10">
                   <img 
                     src={imagePath}
                     alt="Demo content"
@@ -78,15 +78,15 @@ const HomePage = () => {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            background: 'linear-gradient(165deg, #3B82F6 75%, white 75%)'
+            background: 'linear-gradient(-171deg, #5AC4FF 75%, white 75%)'
           }}
         />
-        <div className="relative z-10 container mx-auto px-4 pt-24"> {/* Added pt-24 for top spacing */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="relative z-10 container mx-auto px-6 lg:px-12 pt-24 flex items-center justify-center min-h-screen"> {/* Added pt-24 for top spacing */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Image Placeholder */}
-            <div className="w-full">
+            <div className="w-full flex justify-center">
               {secondImageLoaded ? (
-                <div className="bg-white aspect-square w-full max-w-xl rounded-lg shadow-lg">
+                <div className="bg-white aspect-square w-full max-w-md rounded-lg shadow-lg">
                   <img 
                     src={secondImagePath} 
                     alt="Second Demo content" 
@@ -94,17 +94,17 @@ const HomePage = () => {
                   />
                 </div>
               ) : (
-                <div className="bg-white aspect-square w-full max-w-xl rounded-lg shadow-lg"></div>
+                <div className="bg-white aspect-square w-full max-w-md rounded-lg shadow-lg"></div>
               )}
             </div>
             
             {/* Text content */}
-            <div className="text-white space-y-6">
+            <div className="text-white space-y-6 ">
               <h2 className="text-4xl font-bold mb-6 ">What is GameCraftor?</h2>
-              <p className="text-lg">
+              <p className="text-lg text-justify leading-relaxed">
                 GameCraftor is an innovative board game design application that enables users to create, modify, and test their game ideas seamlessly. With an intuitive interface and powerful features, GameCraftor streamlines the entire process from ideation to production.
               </p>
-              <p className="text-lg">
+              <p className="text-lg text-justify leading-relaxed">
                 With GameCraftor, you can dive right into designing new games from scratch, edit and fine-tune existing ones, or rigorously test your ideas through immersive simulations. We're here to make sure your creative journey from concept to physical production is smooth and satisfying.
               </p>
             </div>

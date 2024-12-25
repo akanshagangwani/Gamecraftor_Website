@@ -9,13 +9,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black py-4 px-6 flex items-center justify-between fixed w-full top-0 z-50 h-16 sm:h-20 md:h-20">
+    <nav className="bg-black py-4 px-6 flex items-center justify-between fixed w-full top-0 z-50 h-16 sm:h-15 md:h-15">
       {/* Logo and Navbar Items */}
       <div className="flex items-center gap-2">
         <img 
           src="/src/assets/logo.png" 
           alt="GameCraftor Logo" 
-          className="h-10 w-10 object-contain"
+          className="h-12 w-12 object-contain"
         />
         <span className="text-white text-xl font-semibold">GameCraftor</span>
       </div>
