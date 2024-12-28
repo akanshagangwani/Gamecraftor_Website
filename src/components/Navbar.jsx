@@ -21,7 +21,7 @@ const Navbar = () => {
       </div>
 
       {/* Centered Download Button (hidden on mobile) */}
-      <button className="bg-pink-400 hover:bg-pink-500 text-white px-6 py-2 rounded-full transition-colors absolute left-1/2 transform -translate-x-1/2 hidden sm:block">
+      <button className="bg-pink-500 hover:bg-pink-500 text-white px-6 py-2 rounded-full transition-colors absolute left-1/2 transform -translate-x-1/2 hidden sm:block">
         Download App
       </button>
 
