@@ -128,12 +128,12 @@ const HomePage = () => {
       </div>
 
       {/* Key Features Section with Diagonal Background */}
-      <div className="relative py-24 overflow-hidden">
+      <div className="relative py-5 overflow-hidden">
         <div 
           className="absolute inset-0 z-0"
           style={{
             background: `
-              linear-gradient(171deg, 
+              linear-gradient(101deg, 
                 white 30%,
                 white 70%,
                 
@@ -142,7 +142,7 @@ const HomePage = () => {
           }}
         />
         
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-[-20] relative z-10">
           <h2 className="text-4xl font-bold text-white text-center mb-16">
             Key Features
           </h2>
@@ -157,16 +157,16 @@ const HomePage = () => {
       {/* Third Section with Purple Gradient */}
       <div className="relative min-h-screen">
         <div 
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-15 mb-30 "
           style={{
             background: 'linear-gradient(174deg, white 20%, #9370DB 20%)'
           }}
         />
-        <div className="relative z-10 container mx-auto px-6 lg:px-12 py-24">
+        <div className="relative z-10 container mx-auto px-6 lg:px-12 py-14 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="text-white mt-12">
-              <h2 className="text-4xl font-bold mb-6">Why GameCraftor?</h2>
-              <p className="text-lg mb-6">
+            <div className="text-white mt-40">
+              <h2 className="text-4xl font-bold mb-5 ">Why GameCraftor?</h2>
+              <p className="text-lg mb-5 ">
                 What sets us apart is our focus on enhancing both creativity and efficiency.
               </p>
               <ul className="space-y-3 text-lg">
@@ -177,7 +177,7 @@ const HomePage = () => {
                 <li>- Order hard copies through trusted vendors</li>
               </ul>
             </div>
-            <div className="bg-white aspect-square w-full max-w-md rounded-lg shadow-lg mx-auto mt-12">
+            <div className="bg-white aspect-square w-full max-w-md rounded-lg shadow-lg mx-auto mt-40">
               {/* Placeholder for future image */}
             </div>
           </div>
