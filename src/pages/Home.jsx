@@ -189,15 +189,33 @@ const HomePage = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center space-x-4 mb-4">
-                <img src="/src/assets/logo.png" alt="GameCraftor" className="h-8" />
-                <span className="text-black font-bold text-lg">GameCraftor</span>
+              <div className="flex items-center space-x-0 mb-6 -ml-20 -mt-10">
+                <img src="/src/assets/logo.png" alt="GameCraftor" className="h-16 w-16" />
+                <span className="text-black font-bold text-2xl">GameCraftor</span>
               </div>
-              <p className="text-sm">Follow Us</p>
+              <p className="text-md">Follow Us</p>
               <div className="flex space-x-4 mt-2">
-                <a href="#" className="hover:text-gray-600">Facebook</a>
-                <a href="#" className="hover:text-gray-600">YouTube</a>
-                <a href="#" className="hover:text-gray-600">LinkedIn</a>
+                <a href="#" className="hover:opacity-80">
+                  <img 
+                    src="/src/assets/facebook_icon.png" 
+                    alt="Facebook" 
+                    className="h-6 w-6"
+                  />
+                </a>
+                <a href="#" className="hover:opacity-80">
+                  <img 
+                    src="/src/assets/youtube_icon.png" 
+                    alt="YouTube" 
+                    className="h-6 w-6"
+                  />
+                </a>
+                <a href="#" className="hover:opacity-80">
+                  <img 
+                    src="/src/assets/linkedin_icon.png" 
+                    alt="LinkedIn" 
+                    className="h-6 w-6"
+                  />
+                </a>
               </div>
             </div>
             <div>
@@ -223,8 +241,8 @@ const HomePage = () => {
                 <p className="text-sm">Corporate Identity Number: xxxxxxxxxxxxxxxxxxxxx</p>
               </div>
               <div className="text-right">
-                <p className="text-sm">contact@synergim.com</p>
-                <p className="text-sm">Call +1 804-569-5489</p>
+                <p className="text-sm">✉contact@synergim.com</p>
+                <p className="text-sm">📞Call +1 804-569-5489</p>
               </div>
             </div>
             <p className="text-sm text-center mt-8">Synergim LLC. All Rights Reserved</p>
