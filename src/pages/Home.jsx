@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 
 const BenefitCard = ({ headingText }) => (
   <div 
-    className="p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 aspect-square flex items-center justify-center"
+    className="p-4 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 aspect-square flex items-center justify-center"
     style={{
       backgroundColor: headingText === "Reduced Costs" ? "#ff6b6b" :
                       headingText === "Unifies Workflow" ? "#ffa94d" :
@@ -11,10 +11,25 @@ const BenefitCard = ({ headingText }) => (
                       headingText === "AI-Driven Templates" ? "#69db7c" :
                       headingText === "Custom Game Components" ? "#adb5bd" :
                       "#e64980",
-      boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
+      boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+      width: "325px",  // Adjust width
+      height: "320px"  // Adjust height
     }}
   >
-    <h3 className="text-2xl font-semibold text-gray-800 text-center">{headingText}</h3>
+    <h3 
+      className="text-3xl font-bold text-center"
+      style={{
+        color: headingText === "Reduced Costs" ? "#8D4646" :
+               headingText === "Unifies Workflow" ? "#9A644B" :
+               headingText === "Supports Multilingual" ? "#999B4D" :
+               headingText === "AI-Driven Templates" ? "#468144" :
+               headingText === "Custom Game Components" ? "#56575A" :
+               headingText === "Playtesting" ? "#904c7c" :
+               "#ffffff"
+      }}
+    >
+      {headingText}
+    </h3>
   </div>
 );
 
