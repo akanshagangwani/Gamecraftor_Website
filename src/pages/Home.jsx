@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 
 const BenefitCard = ({ headingText }) => (
   <div 
-    className="p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 aspect-square flex items-center justify-center"
+    className="p-4 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 aspect-square flex items-center justify-center"
     style={{
       backgroundColor: headingText === "Reduced Costs" ? "#ff6b6b" :
                       headingText === "Unifies Workflow" ? "#ffa94d" :
@@ -11,10 +11,25 @@ const BenefitCard = ({ headingText }) => (
                       headingText === "AI-Driven Templates" ? "#69db7c" :
                       headingText === "Custom Game Components" ? "#adb5bd" :
                       "#e64980",
-      boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
+      boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+      width: "325px",  // Adjust width
+      height: "320px"  // Adjust height
     }}
   >
-    <h3 className="text-2xl font-semibold text-gray-800 text-center">{headingText}</h3>
+    <h3 
+      className="text-3xl font-bold text-center"
+      style={{
+        color: headingText === "Reduced Costs" ? "#8D4646" :
+               headingText === "Unifies Workflow" ? "#9A644B" :
+               headingText === "Supports Multilingual" ? "#999B4D" :
+               headingText === "AI-Driven Templates" ? "#468144" :
+               headingText === "Custom Game Components" ? "#56575A" :
+               headingText === "Playtesting" ? "#904c7c" :
+               "#ffffff"
+      }}
+    >
+      {headingText}
+    </h3>
   </div>
 );
 
@@ -128,12 +143,12 @@ const HomePage = () => {
       </div>
 
       {/* Key Features Section with Diagonal Background */}
-      <div className="relative py-24 overflow-hidden">
+      <div className="relative overflow-hidden">
         <div 
           className="absolute inset-0 z-0"
           style={{
             background: `
-              linear-gradient(171deg, 
+              linear-gradient(101deg, 
                 white 30%,
                 white 70%,
                 
@@ -143,9 +158,6 @@ const HomePage = () => {
         />
         
         <div className="container mx-auto px-6 relative z-10">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">
-            Key Features
-          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {benefitsGrid.map((benefit, index) => (
               <BenefitCard {...benefit} key={`benefit-${index}`} />
@@ -157,16 +169,16 @@ const HomePage = () => {
       {/* Third Section with Purple Gradient */}
       <div className="relative min-h-screen">
         <div 
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-15 mb-30"
           style={{
             background: 'linear-gradient(174deg, white 20%, #9370DB 20%)'
           }}
         />
-        <div className="relative z-10 container mx-auto px-6 lg:px-12 py-24">
+        <div className="relative z-10 container mx-auto px-6 lg:px-12 py-14 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="text-white mt-12">
-              <h2 className="text-4xl font-bold mb-6">Why GameCraftor?</h2>
-              <p className="text-lg mb-6">
+            <div className="text-white mt-40">
+              <h2 className="text-4xl font-bold mb-5 ">Why GameCraftor?</h2>
+              <p className="text-lg mb-5 ">
                 What sets us apart is our focus on enhancing both creativity and efficiency.
               </p>
               <ul className="space-y-3 text-lg">
@@ -177,7 +189,7 @@ const HomePage = () => {
                 <li>- Order hard copies through trusted vendors</li>
               </ul>
             </div>
-            <div className="bg-white aspect-square w-full max-w-md rounded-lg shadow-lg mx-auto mt-12">
+            <div className="bg-white aspect-square w-full max-w-md rounded-lg shadow-lg mx-auto mt-40">
               {/* Placeholder for future image */}
             </div>
           </div>
