@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import React from 'react';
 
-export default function AboutUs() {
+const AboutUs = () => {
   return (
     <div>
-      hello
+      <h1>About Us</h1>
+      <p>Welcome to the About Us page!</p>
     </div>
-  )
-}
+  );
+};
+
+export default AboutUs;
