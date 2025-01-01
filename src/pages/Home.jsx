@@ -143,7 +143,7 @@ const HomePage = () => {
       </div>
 
       {/* Key Features Section with Diagonal Background */}
-      <div className="relative py-5 overflow-hidden">
+      <div className="relative overflow-hidden">
         <div 
           className="absolute inset-0 z-0"
           style={{
@@ -157,10 +157,7 @@ const HomePage = () => {
           }}
         />
         
-        <div className="container mx-auto px-[-20] relative z-10">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">
-            Key Features
-          </h2>
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {benefitsGrid.map((benefit, index) => (
               <BenefitCard {...benefit} key={`benefit-${index}`} />
@@ -172,7 +169,7 @@ const HomePage = () => {
       {/* Third Section with Purple Gradient */}
       <div className="relative min-h-screen">
         <div 
-          className="absolute inset-0 z-15 mb-30 "
+          className="absolute inset-0 z-15 mb-30"
           style={{
             background: 'linear-gradient(174deg, white 20%, #9370DB 20%)'
           }}
