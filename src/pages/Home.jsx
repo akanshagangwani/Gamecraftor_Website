@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-
 const BenefitCard = ({ headingText }) => (
   <div 
     className="p-4 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 aspect-square flex items-center justify-center"
