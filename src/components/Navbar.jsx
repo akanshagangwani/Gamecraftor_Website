@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   // Function to scroll to the top of the page
   const scrollToTop = () => {
     window.scrollTo({
