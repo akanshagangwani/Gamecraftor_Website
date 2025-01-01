@@ -4,6 +4,37 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Function to scroll to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Smooth scrolling
+    });
+    setIsMobileMenuOpen(false); // Close mobile menu if open
+  };
+
+  // Function to scroll to the bottom of the page
+  const scrollToBottom = () => {
+    const start = window.scrollY;
+    const end = document.documentElement.scrollHeight;
+    const duration = 1000; // Duration in milliseconds
+    const startTime = performance.now();
+
+    const animateScroll = (currentTime) => {
+      const elapsedTime = currentTime - startTime;
+      const progress = Math.min(elapsedTime / duration, 1); // Ensure progress doesn't exceed 1
+      const easeInOutQuad = (t) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t; // Easing function
+      window.scrollTo(0, start + (end - start) * easeInOutQuad(progress));
+
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll);
+      }
+    };
+
+    requestAnimationFrame(animateScroll);
+    setIsMobileMenuOpen(false); // Close mobile menu if open
+  };
+
   const toggleMenu = () => {
     setIsMobileMenuOpen(prevState => !prevState);
   };
@@ -28,15 +59,21 @@ const Navbar = () => {
       {/* Desktop/Tablet View (Links) */}
       <div className="hidden sm:flex items-center gap-8">
         <div className="flex items-center gap-6">
-          <Link to="/" className="text-white hover:text-pink-400 transition-colors">
+        <button
+            onClick={scrollToTop} // Use the scrollToTop function
+            className="text-white hover:text-pink-400 transition-colors"
+          >
             Home
-          </Link>
+          </button>
           <Link to="/about" className="text-white hover:text-pink-400 transition-colors">
             About Us
           </Link>
-          <Link to="/contact" className="text-white hover:text-pink-400 transition-colors">
+          <button
+            onClick={scrollToBottom} // Use the scrollToBottom function
+            className="text-white hover:text-pink-400 transition-colors"
+          >
             Contact Us
-          </Link>
+          </button>
         </div>
       </div>
 
